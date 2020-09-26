@@ -11,6 +11,10 @@ abstract class Cybloc<T, R> {
   StreamSink<R> get eventController => _eventController.sink;
 
   mapEventToState(R event);
+
+  emit(T data) {
+    inStream.add(data);
+  }
   
   void dispose() {
     _streamController?.close();
