@@ -19,6 +19,8 @@ abstract class Cybloc<T, R> {
   addEvent(R event) {
     eventListen.add(event);
   }
+
+  a
   
   void dispose() {
     _streamController?.close();
